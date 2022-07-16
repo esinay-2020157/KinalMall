@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.edgarsinay.controller.LoginController">
+   <children>
+      <Pane layoutX="-8.0" layoutY="-7.0" prefHeight="408.0" prefWidth="310.0" styleClass="menu-button" stylesheets="@../resource/KinalMallCSS.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="63.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FondoB.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="anchor-pane3" stylesheets="@../resource/KinalMallCSS.css">
+         <children>
+            <TextField fx:id="txtUsuario" layoutX="50.0" layoutY="147.0" promptText="User Name" styleClass="text-field2" stylesheets="@../resource/KinalMallCSS.css">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="16.0" />
+               </font></TextField>
+            <Button fx:id="btnLogin" layoutX="97.0" layoutY="245.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="107.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Button>
+            <Hyperlink layoutX="94.0" layoutY="324.0" onMouseClicked="#ventanaUsuario" prefHeight="19.0" prefWidth="157.0" text="Registrese Aquí..." textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="116.0" fitWidth="115.0" layoutX="96.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/login.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtPassword" layoutX="50.0" layoutY="200.0" promptText="Password" styleClass="text-field2" stylesheets="@../resource/KinalMallCSS.css">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="16.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

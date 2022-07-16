@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="11158234-6ddb-485a-a8ed-e0b2615f1891">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="427e4cbf-bb62-4a1e-8df1-6dfd926d3c4b"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020157\\src\\org\\edgarsinay\\images\\FondoIreport.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="197" y="56" width="268" height="42" forecolor="#000000" backcolor="#FFFFFF" uuid="0945c80c-c31f-4796-8c18-f6b5c82da9ee"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="29" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Administración]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="5" width="132" height="98" uuid="52c47581-8976-42f8-abfe-b7c73873ae49"/>
+				<imageExpression><![CDATA["C:\\Users\\hp\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020157\\src\\org\\edgarsinay\\images\\FondoA.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="18" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="11" y="10" width="561" height="20" forecolor="#FF9933" backcolor="#FF9933" uuid="4bac995c-59ea-4351-b972-4f04be662724"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="465" y="13" width="76" height="20" forecolor="#000000" uuid="8612e82a-0eda-448c-bc71-6c35fd7bc454"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="11" y="12" width="238" height="20" forecolor="#000000" backcolor="#000000" uuid="4975ba78-be6b-4c5b-a06f-fb45886895be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="12" width="118" height="20" forecolor="#000000" uuid="e48fdcfb-fa99-48b0-835f-a89d9a29e1b3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="113" y="7" width="73" height="20" uuid="c03823fe-e5ee-4bb2-a7eb-97f901606f5c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="31" width="572" height="1" forecolor="#FF9933" backcolor="#FF9933" uuid="4092ad86-939f-4864-a6dd-1540f2ad4f66"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="272" y="7" width="100" height="20" uuid="b18b39df-b302-4d5b-ab3a-647f51dbddba"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="7" width="59" height="20" uuid="aff994ca-f38f-4d96-ab66-af8b24d6ac7a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="14" width="219" height="28" backcolor="#000000" uuid="825a3bca-87eb-4763-9679-684f7d3b7010"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Edgar Josué Sinay Medina]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

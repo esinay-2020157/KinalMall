@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Prueba" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0163682c-3cdd-4381-8aa3-94b843786b4d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Call sp_ListarCuentasPorPagar();]]>
+	</queryString>
+	<field name="codigoCuentasPorPagar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroFactura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaLimitePago" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorNetoPago" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoProveedor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="555" height="802" uuid="22009e7a-2da4-4230-ac2f-b8aea1732b3c"/>
+				<imageExpression><![CDATA["C:\\Users\\Josue\\Documents\\NetBeansProjects\\KinalMall2020157\\src\\org\\edgarsinay\\images\\พื้นหลังสีสันสวยงามสวยงาม H5.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="47" y="0" width="94" height="79" uuid="795dbc1e-c73c-4a33-9c7a-43a008fefad4"/>
+				<imageExpression><![CDATA["C:\\Users\\Josue\\Documents\\NetBeansProjects\\KinalMall2020157\\src\\org\\edgarsinay\\images\\Departamentos.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="167" y="20" width="233" height="41" forecolor="#000000" uuid="b6be46f2-e9e8-493c-8f5d-cda1978bfa63"/>
+				<textElement textAlignment="Center">
+					<font fontName="Aparajita" size="34" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuentas Por Pagar]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="52" y="2" width="100" height="20" uuid="ca0c94e3-e481-436d-b722-bdda54446963"/>
+				<text><![CDATA[codigoCuentasPorPagar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="2" width="100" height="20" uuid="01770e83-394b-4711-8281-f1dc500a7db7"/>
+				<text><![CDATA[numeroFactura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="2" width="100" height="20" uuid="17051751-221e-483c-bf79-d1173e43cd22"/>
+				<text><![CDATA[fechaLimitePago]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="52" y="33" width="100" height="20" uuid="bc31e1c7-2013-4610-b7d0-f5daadf2ba36"/>
+				<textFieldExpression><![CDATA[$F{codigoCuentasPorPagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="36" width="100" height="20" uuid="c4dd7342-f904-42da-8e40-72b695875b3e"/>
+				<textFieldExpression><![CDATA[$F{numeroFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="41" width="100" height="20" uuid="0e532277-fe2c-4804-a844-fe864228c9eb"/>
+				<textFieldExpression><![CDATA[$F{fechaLimitePago}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
